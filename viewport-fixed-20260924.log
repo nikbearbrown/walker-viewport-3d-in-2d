@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS 2D animation started
+PASS five atlas frames
+PASS 2D animation advances
+PASS 3D robot rotates with processing
+PASS sprite uses viewport texture
+PASS texture references correct viewport
+PASS square render target (1280, 720)
+PASS compensated sprite size (1280, 720)
+PASS square render target (1920, 1080)
+PASS compensated sprite size (1920, 1080)
+PASS square render target (800, 600)
+PASS compensated sprite size (800, 600)
+RESULT failures=0; headless state, no GPU pixel verification

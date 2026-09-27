@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="t d">
+<title id="t">Recovered frame and resize flow · 3D in 2D</title>
+<desc id="d">No player loop. Two runtime cycles observed in godot/3d_in_2d.gd and robot_3d.gd; nothing is player-driven. IDs: M-01 M-02 M-03 M-04 · F-01..F-06.</desc>
+<rect width="1200" height="560" fill="#faf9f5"/>
+<defs><marker id="a" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#25354a"/></marker><marker id="ar" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#d24e42"/></marker></defs>
+<g font-family="Helvetica, Arial, sans-serif">
+<text x="32" y="44" font-size="26" font-weight="700" fill="#25354a">Recovered frame and resize flow · 3D in 2D</text>
+<text x="32" y="68" font-size="14" fill="#5b6b7c">No player loop. Two runtime cycles observed in godot/3d_in_2d.gd and robot_3d.gd; nothing is player-driven.</text>
+<text x="32" y="88" font-size="13" fill="#5b6b7c">IDs: M-01 M-02 M-03 M-04 · F-01..F-06</text>
+<text x="32" y="118" font-size="14" fill="#25354a" text-anchor="start" font-weight="700">PER FRAME</text>
+<rect x="40" y="130" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="155.0" y="159.0" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">robot_3d.gd _process</text>
+<text x="155.0" y="179.0" font-size="13" text-anchor="middle" fill="#5b6b7c">rotation.y += delta*0.7</text>
+<text x="155.0" y="196.0" font-size="13" text-anchor="middle" fill="#5b6b7c">robot_3d.gd:8 (M-03)</text>
+<rect x="330" y="130" width="250" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="455.0" y="159.0" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">SubViewport 300x300</text>
+<text x="455.0" y="179.0" font-size="13" text-anchor="middle" fill="#5b6b7c">update mode 4 = always</text>
+<text x="455.0" y="196.0" font-size="13" text-anchor="middle" fill="#5b6b7c">transparent, msaa 2 (M-01)</text>
+<rect x="640" y="130" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="755.0" y="159.0" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">ViewportTexture</text>
+<text x="755.0" y="179.0" font-size="13" text-anchor="middle" fill="#5b6b7c">viewport_path SubViewport</text>
+<text x="755.0" y="196.0" font-size="13" text-anchor="middle" fill="#5b6b7c">3d_in_2d.tscn:7-8</text>
+<rect x="930" y="130" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="1045.0" y="159.0" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">ViewportSprite</text>
+<text x="1045.0" y="179.0" font-size="13" text-anchor="middle" fill="#5b6b7c">Sprite2D at (650,300)</text>
+<text x="1045.0" y="196.0" font-size="13" text-anchor="middle" fill="#5b6b7c">F-02</text>
+<path d="M270 170 L328 170" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M580 170 L638 170" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M870 170 L928 170" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<rect x="40" y="240" width="530" height="60" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="305.0" y="267.5" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">AnimatedSprite2D, 5 frames @ 5 fps, 3x, nearest</text>
+<text x="305.0" y="287.5" font-size="13" text-anchor="middle" fill="#5b6b7c">2D reference beside the 3D render (M-04)</text>
+<text x="32" y="342" font-size="14" fill="#25354a" text-anchor="start" font-weight="700">PER WINDOW RESIZE</text>
+<rect x="40" y="360" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="155.0" y="397.5" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">root size_changed</text>
+<text x="155.0" y="417.5" font-size="13" text-anchor="middle" fill="#5b6b7c">3d_in_2d.gd:10</text>
+<rect x="330" y="360" width="250" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="455.0" y="397.5" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">SubViewport.size = (h, h)</text>
+<text x="455.0" y="417.5" font-size="13" text-anchor="middle" fill="#5b6b7c">3d_in_2d.gd:18 (M-02)</text>
+<rect x="640" y="360" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="755.0" y="397.5" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">sprite.scale = 300 / h</text>
+<text x="755.0" y="417.5" font-size="13" text-anchor="middle" fill="#5b6b7c">3d_in_2d.gd:19</text>
+<rect x="930" y="360" width="230" height="80" rx="10" fill="#fffdf7" stroke="#25354a" stroke-width="2.5"/>
+<text x="1045.0" y="389.0" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">on-screen size stays 300</text>
+<text x="1045.0" y="409.0" font-size="13" text-anchor="middle" fill="#5b6b7c">headless PASS x3 sizes</text>
+<text x="1045.0" y="426.0" font-size="13" text-anchor="middle" fill="#5b6b7c">viewport-fixed log</text>
+<path d="M270 400 L328 400" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M580 400 L638 400" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<path d="M870 400 L928 400" fill="none" stroke="#25354a" stroke-width="2.2" marker-end="url(#a)"/>
+<rect x="620" y="460" width="540" height="60" rx="10" fill="#fffdf7" stroke="#d24e42" stroke-width="2.5" stroke-dasharray="9 7"/>
+<text x="890.0" y="487.5" font-size="17" font-weight="700" text-anchor="middle" fill="#25354a">player input / goal / fail state</text>
+<text x="890.0" y="507.5" font-size="13" text-anchor="middle" fill="#5b6b7c">none in code: [MISSING] Q-01..Q-03</text>
+<rect x="32" y="525" width="34" height="16" rx="3" fill="#fffdf7" stroke="#25354a" stroke-width="2"/><text x="74" y="538" font-size="13" fill="#5b6b7c">solid = observed in code</text><rect x="260" y="525" width="34" height="16" rx="3" fill="#fffdf7" stroke="#d24e42" stroke-width="2" stroke-dasharray="6 5"/><text x="302" y="538" font-size="13" fill="#5b6b7c">dashed = proposed / missing / not in code (unapproved)</text>
+</g>
+</svg>
